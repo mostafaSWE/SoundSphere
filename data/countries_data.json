@@ -1534,23 +1534,6 @@
       "name": "Kuwait",
       "top_songs": [
         {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        },
-        {
-          "title": "",
-          "url": ""
-        }
-      ]
-    },
-    {
-      "name": "Kyrgyzstan",
-      "top_songs": [
-        {
           "title": "فرقة ميامي - شيلوها شيلة",
           "url": "https://www.youtube.com/embed/DQT8t2ADmbc?si=ccAhgZeIJ-A6YZHT"
         },
@@ -1561,6 +1544,23 @@
         {
           "title": "نوال الكويتية وعبدالله الرويشد - اعذريني",
           "url": "https://www.youtube.com/embed/CE9v8c40f84?si=Dzxo_89Mrdm2zg4x"
+        }
+      ]
+    },
+    {
+      "name": "Kyrgyzstan",
+      "top_songs": [
+        {
+          "title": "Мирбек Атабеков - Жалынам (Official Video / OST Көк-Бөрү)",
+          "url": "https://www.youtube.com/embed/ZGn3WEW8LsM?si=E-t9cu3rc7vbRJcX"
+        },
+        {
+          "title": "Джонни - Күттүм Ай | Премьера Клипа",
+          "url": "https://www.youtube.com/embed/DQARuY7UWoo?si=02-orDtf68cc4lAD"
+        },
+        {
+          "title": "«I am a Singer» сынагына кыргызстандык ырчы катышууда",
+          "url": "https://www.youtube.com/embed/pvqVk_iebq8?si=ynkiXIxH1hiC8jd7"
         }
       ]
     },
@@ -3315,5 +3315,22 @@
         }
       ]
     }
+    {
+      "name": "Greenland",
+      "top_songs": [
+        {
+          "title": "Nive Nielsen & The Deer Children - Tuttukasik",
+          "url": "https://www.youtube.com/embed/iVd1RRY3P-s?si=xn4mCqeAxs3lHuHX"
+        },
+        {
+          "title": "Nive Nielsen - Vacuum Cleaner Killer",
+          "url": "https://www.youtube.com/embed/2GL-ophGehU?si=VUFIu12ksSZRiMUe"
+        },
+        {
+          "title": "Orpigannguaq",
+          "url": "https://www.youtube.com/embed/ZQObcvNLPUk?si=Ysy6jiVMEuA7arPb"
+        }
+      ]
+    },
   ]
 }
