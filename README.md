@@ -30,11 +30,12 @@ soundsphere/
 ├── explore.html # Map & song explorer
 ├── /css/
 │ └── style.css
+│ └── explore.css
 ├── /js/
 │ └── explore.js
+│ └── main.js
 ├── /assets/
-│ ├── /images/ # Logos, illustrations, map SVG
-│ └── /fonts/ # Optional
+│ ├── illustrations, map SVG
 └── README.md
 
 
@@ -44,7 +45,7 @@ soundsphere/
 
 - HTML5 / CSS3 / JavaScript
 - Embedded YouTube players
-- [Optional] SVG-based map 
+- SVG-based map 
 - Hosted on GitHub Pages
 
 ---
