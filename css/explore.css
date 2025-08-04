@@ -1,0 +1,380 @@
+/* EXPLORE PAGE STYLES */
+
+.explore-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #1B1B1B;
+    color: #FFFFFF;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    background: #2B2B2B;
+    box-shadow: 0 0 10px rgba(122, 14, 14, 0.3);
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+/* Map Container */
+.map-container {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#world-map {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#svg-map {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+/* SVG Map Styling */
+#svg-map path {
+    transition: fill 0.3s ease;
+}
+
+#svg-map path:hover {
+    fill: #B8B8B8 !important;
+}
+
+#svg-map path.selected {
+    fill: #5F1111 !important;
+}
+
+/* Country Info */
+.country-info {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #1B1B1B;
+    border-radius: 15px;
+    border-left: 4px solid #7A0E0E;
+}
+
+.country-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #FFFFFF;
+}
+
+.country-name {
+    color: #5F1111;
+    font-weight: 600;
+}
+
+/* Song Section */
+.song-section {
+    background: #1B1B1B;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.song-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.song-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #2B2B2B;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 100px;
+}
+
+.song-btn:hover {
+    background: #3B3B3B;
+    transform: translateY(-2px);
+}
+
+.song-btn.active {
+    background: #5F1111;
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(95, 17, 17, 0.3);
+}
+
+/* Song Content */
+.song-content {
+    position: relative;
+}
+
+.song-item {
+    display: none;
+    text-align: center;
+}
+
+.song-item.active {
+    display: block;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+}
+
+.song-info {
+    margin-top: 20px;
+}
+
+.song-info h3 {
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .explore-container {
+        padding: 20px 15px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    #world-map {
+        height: 450px;
+    }
+    
+    .song-buttons {
+        gap: 10px;
+    }
+    
+    .song-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        min-width: 80px;
+    }
+    
+    .video-container iframe {
+        height: 200px;
+    }
+    
+    .song-info h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    #world-map {
+        height: 400px;
+    }
+    
+    .song-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .song-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .video-container iframe {
+        height: 180px;
+    }
+} 
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.zoom-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.zoom-btn {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #B8B8B8;
+    border: 2px solid #5F1111;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.zoom-btn:hover {
+    background-color: #5F1111;
+    transform: scale(1.1);
+}
+
+.zoom-btn:active {
+    transform: scale(0.95);
+}
+
+#svg-map {
+    cursor: grab;
+}
+
+#svg-map:active {
+    cursor: grabbing;
+}
+
+/* Responsive zoom controls */
+@media (max-width: 768px) {
+    .zoom-controls {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .zoom-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #5F1111;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item.active {
+    background-color: #f8f8f8;
+}
+
+.suggestion-item .country-name {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.suggestion-item.active .country-name {
+    color: #5F1111;
+}
+
+/* Ensure search container has relative positioning */
+.search-container {
+    position: relative;
+}
+
+/* Custom scrollbar for suggestions */
+.search-suggestions::-webkit-scrollbar {
+    width: 6px;
+}
+
+.search-suggestions::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.search-suggestions::-webkit-scrollbar-thumb {
+    background: #5F1111;
+    border-radius: 3px;
+}
+
+.search-suggestions::-webkit-scrollbar-thumb:hover {
+    background: #4a0e0e;
+}
+
+@media (max-width: 768px) {
+    .suggestion-item {
+        padding: 10px 12px;
+    }
+    
+    .suggestion-item .country-name {
+        font-size: 13px;
+    }
+    
+    .search-suggestions {
+        max-height: 200px;
+    }
+}

@@ -1,0 +1,507 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+    line-height: 1.6;
+  }
+  
+  /* NAVIGATION */
+header {
+  padding: 20px 50px;
+  background: transparent;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background-color: #0D0D0D;
+  padding: 20px 60px;
+  width: 100%;
+  z-index: 999;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  grid-column: 1;
+}
+
+.logo img {
+  width: 126px;
+  height: 126px;
+}
+
+.nav-links a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #D9534F; /* Accent red on hover */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  grid-column: 2;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  grid-column: 3;
+  justify-self: end;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #FFF;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+  
+  /* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 18px 40px;
+  background: #7A0E0E;
+  color: #FFF;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background: #A31313;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(122, 14, 14, 0.3);
+}
+
+.hero-image img {
+  max-width: 400px;
+  height: auto;
+}
+
+.section-divider {
+  width: 700px;              /* fixed width, can be adjusted */
+  max-width: 50%;            /* responsive on smaller screens */
+  border: none;
+  border-top: 1px solid;  /* light white with opacity */
+  margin: 0 auto;       /* center horizontally with spacing below */
+}
+  
+  /* HOW IT WORKS */
+  .how-it-works {
+    padding: 100px 50px;
+    text-align: center;
+  }
+  
+  .how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    background: #1B1B1B;
+    padding: 30px;
+    border-radius: 12px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .step p {
+  padding-top: 10px; /* You can adjust this value as needed */
+}
+  
+  .step:hover {
+    transform: translateY(-5px);
+  }
+  
+  .step-circle {
+    width: 50px;
+    height: 50px;
+    background: #7A0E0E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 auto 15px;
+  }
+  
+  /* CONTINENT SECTION */
+.continent-section {
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.continent-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+
+.continent-card {
+  background: #1B1B1B;
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+}
+
+.continent-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.continent-card.scroll-up {
+  transform: translateY(-100px);
+}
+
+.continent-card.scroll-up.visible {
+  transform: translateY(0);
+}
+
+.continent-card:nth-child(even) {
+  transform: translateY(-100px);
+}
+
+.continent-card:nth-child(even).visible {
+  transform: translateY(0);
+}
+
+.continent-card:nth-child(even).scroll-up {
+  transform: translateY(100px);
+}
+
+.continent-card:nth-child(even).scroll-up.visible {
+  transform: translateY(0);
+}
+
+.continent-card img {
+  max-width: 200px;
+  flex-shrink: 0;
+}
+
+.continent-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 400px;
+  text-align: right;
+}
+
+.continent-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.continent-content .tagline {
+  font-weight: 600;
+  color: #D9534F;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.continent-content p {
+  text-align: center;
+  line-height: 1.6;
+  word-wrap: break-word;
+  hyphens: auto;
+  width: 100%;
+}
+  
+  footer {
+  padding: 20px;
+  text-align: center;
+  background: #0B0B0B;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Close menu button - hidden by default on desktop */
+.close-menu {
+  display: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  
+  .navbar {
+    padding: 15px 20px;
+    grid-template-columns: 1fr auto;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    list-style: none;
+  }
+  
+  .nav-links a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background: rgba(122, 14, 14, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .close-menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-menu:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .hero {
+    position: relative;
+    flex-direction: column;
+    padding: 60px 20px;
+    min-height: 70vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/music_man.png') center center/cover no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 40px;
+    z-index: 1;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    z-index: 1;
+  }
+  
+  .hero-image {
+    display: none;
+  }
+  
+  .how-it-works {
+    padding: 60px 20px;
+  }
+  
+  .how-it-works h2 {
+    font-size: 2rem;
+  }
+  
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .continent-section {
+    padding: 60px 20px;
+  }
+  
+  .continent-section h2 {
+    font-size: 2rem;
+  }
+  
+  .continent-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .continent-card img {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .continent-content {
+    align-items: center;
+    max-width: 100%;
+  }
+  
+  .continent-content h3,
+  .continent-content .tagline,
+  .continent-content p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+  
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .continent-card {
+    padding: 20px 15px;
+  }
+  
+  .continent-card img {
+    max-width: 120px;
+  }
+}
+  

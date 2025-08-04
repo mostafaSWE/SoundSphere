@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - SoundSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/explore.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="assets/logo.png" alt="SoundSphere Logo">
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <button class="close-menu">&times;</button>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="home.html#how-it-works">How It Works</a></li>
+                <li><a href="home.html#continents">Get to Know the World</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="explore-container">
+        <h1 class="page-title">Select the Country</h1>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="country-search" placeholder="Search by country name" class="search-input">
+        </div>
+
+        <!-- Interactive Map -->
+        <div class="map-container">
+            <div id="world-map">
+                <!-- Embedded SVG World Map -->
+                <svg id="svg-map" viewBox="0 0 2000 857" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; background: #0D0D0D;">
+                    <!-- SVG content will be loaded here -->
+                </svg>
+            </div>
+        </div>
+
+        <!-- Selected Country Info -->
+        <div id="country-info" class="country-info" style="display: none;">
+            <p>The selected country is <span id="selected-country-name" class="country-name"></span></p>
+            <p>The Top 3 songs in <span id="country-name-display" class="country-name"></span> are:</p>
+        </div>
+
+        <!-- Song Display Section -->
+        <div id="song-section" class="song-section" style="display: none;">
+            <div class="song-buttons">
+                <button class="song-btn active" data-song="1">1st song</button>
+                <button class="song-btn" data-song="2">2nd song</button>
+                <button class="song-btn" data-song="3">3rd song</button>
+            </div>
+            
+            <div class="song-content">
+                <div id="song-1" class="song-item active">
+                    <div class="video-container">
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="song-info">
+                        <h3>Talal Maddah - Gatny Tekoul</h3>
+                    </div>
+                </div>
+                
+                <div id="song-2" class="song-item">
+                    <div class="video-container">
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/9bZkp7q19f0" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="song-info">
+                        <h3>Second Song Title</h3>
+                    </div>
+                </div>
+                
+                <div id="song-3" class="song-item">
+                    <div class="video-container">
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/kJQP7kiw5Fk" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="song-info">
+                        <h3>Third Song Title</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  <footer>
+    <p>&copy; 2025 SoundSphere</p>
+  </footer>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    
+    <script src="js/explore.js"></script>
+</body>
+</html>
