@@ -256,10 +256,10 @@ $(document).ready(function() {
         }
         
         // Filter countries based on search term
-        const matchingCountries = availableCountries.filter(country => 
-            country.normalizedName.includes(searchTerm) ||
-            country.name.toLowerCase().includes(searchTerm)
-        ).slice(0, 8); // Limit to 8 suggestions
+        const matchingCountries = availableCountries.filter(country =>
+        country.normalizedName.startsWith(searchTerm) ||
+        country.name.toLowerCase().startsWith(searchTerm)).slice(0, 8);
+
         
         if (matchingCountries.length === 0) {
             hideSuggestions();
