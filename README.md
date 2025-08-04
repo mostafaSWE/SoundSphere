@@ -19,7 +19,7 @@ SoundSphere is a simple, beautiful web app that lets users explore music from di
 
 ## 🚀 Live Demo
 
-👉 [Visit the website]([https://your-deployment-url.com](https://mostafaswe.github.io/SoundSphere/explore.html))
+👉 [Visit the website](https://mostafaswe.github.io/SoundSphere/explore.html)
 
 ---
 
