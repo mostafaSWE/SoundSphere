@@ -23,6 +23,13 @@ SoundSphere is a simple, beautiful web app that lets users explore music from di
 
 ---
 
+🎨 Design
+
+I personally designed the interface for SoundSphere in Figma.
+👉 [View the Figma Design](https://www.figma.com/design/8XDeScuZno5aZyoSVt8vvu/SoundSphere?t=a6Vtgt1FJWFdPTIR-1)
+
+---
+
 ## 📁 File Structure
 
 soundsphere/
